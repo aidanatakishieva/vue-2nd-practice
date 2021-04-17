@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./build/style.css" /> <title>Document</title>
+   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="contain">
+        <h2>Blog Posts</h2>
+
+        <div class="new">
+          <h3>Add a New Post</h3>
+          <form @submit.prevent="addPost">
+            <input v-model="newTitle" placeholder="title" required />
+            <input v-model="newAuthor" placeholder="author name" required />
+            <select v-model="newLabel" required>
+              <option disabled value="" >Add a New label</option>
+              <option v-for="category in categories" :value="category"
+                >{{ category }}</option
+              >
+            </select>
+            <button type="submit">Add New Blog Post</button>
+          </form>
+        </div>
+
+        <select v-model="selected">
+          <option disabled value="">Filter with a label</option>
+          <option v-for="category in categories" :value="category"
+            >{{ category }}</option
+          >
+        </select>
+
+        <div v-for="post in filteredByLabel" :key="post.title" class="post">
+          <span class="label">{{ post.label }}</span>
+          <p>{{ post.title }}</p>
+          <small>{{ post.author }}</small>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

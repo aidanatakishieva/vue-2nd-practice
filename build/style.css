@@ -1,0 +1,112 @@
+#app {
+  display: flex;
+  justify-content: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+#app .contain h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-size: 30px;
+ color:red;
+}
+
+li {
+  list-style: none;
+}
+li span {
+  display: inline-block;
+  width: 100px;
+}
+
+#app .contain {
+  width: 400px;
+  padding: 10px 40px;
+  
+}
+
+#app .contain .new input,
+select {
+  font-family: "Work Sans", sans-serif;
+}
+#app .contain .new button {
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: 0.25s all ease;
+  background-color: red;
+  margin-bottom: 15px;
+}
+#app .contain .new button:hover {
+  transform: translateY(1px);
+}
+
+#app .contain .new select {
+  width: 100%;
+  
+}
+
+#app .post,
+#app  .new {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 5px 0 10px;
+  
+}
+.post p,
+.new p {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+#app .contain .new {
+  background: #111;
+  margin-bottom: 40px;
+}
+ label {
+  font-size: 13px;
+}
+#app .contain .new input {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: black;
+}
+#app .contain select {
+  width: 98%;
+  margin-bottom: 5px;
+}
+#app .contain  .new h3 {
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+  color: white;
+}
+
+#app .contain .label {
+  border: 1px solid red;
+  background: white;
+  color: black;
+  float: right;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
